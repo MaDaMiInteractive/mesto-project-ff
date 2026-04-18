@@ -1,0 +1,54 @@
+.profile__image {
+  width: 120px;
+  height: 120px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  margin: 0 29px 0 0;
+  padding: 0;
+  border: none;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile__image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.profile__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../../../images/edit-icon.svg') center no-repeat;
+  background-size: 26px 26px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.profile__image:hover::before,
+.profile__image:hover::after {
+  opacity: 1;
+}
+
+@media screen and (max-width: 740px) {
+  .profile__image {
+    margin: 0 10px 0 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile__image {
+    margin-right: 0;
+    margin-bottom: 26px;
+  }
+}

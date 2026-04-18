@@ -1,0 +1,11 @@
+@import url('./_visible/popup__error_visible.css');
+
+.popup__error {
+  display: block;
+  min-height: 30px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+  color: #f00;
+  opacity: 0;
+}
